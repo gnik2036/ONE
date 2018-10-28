@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SignatureTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z9t-5y-AWr">
+                                <rect key="frame" x="-12.5" y="168.5" width="400" height="330"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-lu-sya" customClass="YPDrawSignatureView" customModule="SignatureTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="I4C-mE-4SQ"/>
+                                            <constraint firstAttribute="width" constant="400" id="Wtv-bb-sg2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" red="0.87984528559999997" green="0.052443682329999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QC8-3Q-hSJ">
+                                        <rect key="frame" x="0.0" y="300" width="400" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPw-h6-9Q7">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                                <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="clearSignature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4az-lt-2Z1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdh-YE-RA9">
+                                                <rect key="frame" x="200" y="0.0" width="200" height="30"/>
+                                                <state key="normal" title="Save signature"/>
+                                                <connections>
+                                                    <action selector="saveSignature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LV0-XM-Gv2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Zdh-YE-RA9" firstAttribute="width" secondItem="pPw-h6-9Q7" secondAttribute="width" id="Yi3-uN-yhM"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6e5-HR-I6m">
+                                <rect key="frame" x="57" y="506" width="274" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXT-bx-j9t">
+                                        <rect key="frame" x="10" y="7" width="254" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Signature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMr-E4-3Tm">
+                                        <rect key="frame" x="47" y="72" width="180" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvh-mI-Tfc">
+                                <rect key="frame" x="74" y="28" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z9t-5y-AWr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lq8-Pw-rbn"/>
+                            <constraint firstItem="z9t-5y-AWr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rvO-ps-USf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="qXT-bx-j9t" id="0FN-Yc-LcY"/>
+                        <outlet property="image2" destination="gvh-mI-Tfc" id="WGk-Wo-2HP"/>
+                        <outlet property="myView" destination="8bC-Xf-vdC" id="Ekg-1T-Snh"/>
+                        <outlet property="signatureView" destination="u9Q-lu-sya" id="Pst-Q1-2hh"/>
+                        <segue destination="R4q-1J-daB" kind="show" identifier="goToData" id="Ef4-Q2-Ygw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239.19999999999999" y="36.431784107946029"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="Jk5-fl-bbd">
+            <objects>
+                <viewController id="R4q-1J-daB" customClass="ViewController2" customModule="SignatureTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bdO-fL-w6p"/>
+                        <viewControllerLayoutGuide type="bottom" id="b15-zP-GTd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AQE-jG-LSw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-LR-mrO">
+                                <rect key="frame" x="0.0" y="103" width="300" height="369"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="showimage" destination="3lC-LR-mrO" id="Att-bj-5UK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGc-Xb-h62" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="86.806596701649184"/>
+        </scene>
+    </scenes>
+</document>
